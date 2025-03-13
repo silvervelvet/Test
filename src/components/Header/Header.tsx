@@ -11,7 +11,7 @@ const Header = () => {
         <ErrorNotFound />
         <button className={styles.refresh_btn}>
           Обновить
-          <img src={refresh_icon} alt="refresh_icon" />
+          <img src={refresh_icon} className={styles.refresh_icon} alt="refresh_icon" />
         </button>
       </div>
     </header>
