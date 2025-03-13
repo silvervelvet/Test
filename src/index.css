@@ -1,11 +1,11 @@
 :root {
-  --color-light: #F2F6F6;
+  --color-light: #f2f6f6;
   --color-dark: #090909;
-  --color-grey: #68696A;
-  --color-darkgrey: #0F1318;
-  --color-red: #EB0237;
-  --color-green: #43AD28;
-  --color-orange: #EB6402;
+  --color-grey: #68696a;
+  --color-darkgrey: #0f1318;
+  --color-red: #eb0237;
+  --color-green: #43ad28;
+  --color-orange: #eb6402;
 
   --main-font-size: 1rem;
   --secondary-font-size: 0.8rem;
@@ -28,10 +28,11 @@ body {
   font-weight: 600;
   font-size: 1rem;
   color: var(--color-light);
-  background-color:var(--color-dark);
+  background-color: var(--color-dark);
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
