@@ -1,0 +1,18 @@
+.alert_container {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: var(--color-darkgrey);
+  border-radius: 0.4rem;
+  padding: 1rem 1.5rem;
+}
+
+.alert_icon {
+  max-width: 1.7rem;
+  height: auto;
+}
+
+.alert_message {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
