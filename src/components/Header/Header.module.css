@@ -29,6 +29,15 @@
   align-items: center;
   gap: 0.6rem;
   border-radius: 0.4rem;
+  transition: background-color 0.3s ease;
+}
+
+.refresh_btn:active {
+  background-color: #A01131;
+}
+
+.refresh_btn:disabled {
+  opacity: 30%;
 }
 
 .refresh_icon {
