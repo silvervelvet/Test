@@ -1,8 +1,15 @@
+import { Match } from '../CommandList/CommandList';
 import UICardStatus from '../UI-kit/UICardStatus/UICardStatus';
 import styles from './CommandCard.module.css';
 import command_icon from './img/command_icon.png';
 
-const CommandCard = () => {
+interface CommandCardProps {
+  match: Match;
+}
+
+const CommandCard: React.FC<CommandCardProps> = ({ match }) => {
+  const { awayTeam, homeTeam, awayScore, homeScore, status } = match;
+
   return (
     <section className={styles.card_container}>
       <div className={styles.command}>
@@ -11,14 +18,16 @@ const CommandCard = () => {
           className={styles.command_icon}
           alt="command_icon"
         />
-        <div>Command №1</div>
+        <div>{awayTeam.name}</div>
       </div>
       <div className={styles.command_status_container}>
-        <div className={styles.score}>2 : 1</div>
-        <UICardStatus />
+        <div className={styles.score}>
+          {awayScore} : {homeScore}
+        </div>
+        <UICardStatus status={status} />
       </div>
       <div className={styles.command}>
-        <div>Command №2</div>
+        <div>{homeTeam.name}</div>
         <img
           src={command_icon}
           className={styles.command_icon}
