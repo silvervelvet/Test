@@ -1,6 +1,21 @@
 .status {
-  background-color: var(--color-green);
   border-radius: 0.4rem;
   font-size: 0.7rem;
   padding: 0.3rem 2.1rem;
+}
+
+.status_ongoing {
+  background-color: var(--color-green);
+}
+
+.status_finished {
+  background-color: var(--color-red);
+}
+
+.status_finished {
+  background-color: var(--color-red);
+}
+
+.status_preparing {
+  background-color: var(--color-orange);
 }
