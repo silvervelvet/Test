@@ -2,9 +2,13 @@ import ErrorNotFound from '../ErrorNotFound/ErrorNotFound';
 import logo from './img/MatchTracker.png';
 import refresh_icon from './img/refresh_icon.png';
 import styles from './Header.module.css';
-import { useError } from '../../context/ErrorContext'
+import { useError } from '../../context/ErrorContext';
 
-const Header = () => {
+interface HeaderProps {
+  onRefresh: () => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ onRefresh }) => {
   const { error } = useError();
 
   return (
@@ -12,7 +16,7 @@ const Header = () => {
       <img src={logo} alt="logo" className={styles.logo} />
       <div className={styles.refresh_data_panel}>
         {error && <ErrorNotFound />}
-        <button className={styles.refresh_btn}>
+        <button className={styles.refresh_btn} onClick={onRefresh}>
           Обновить
           <img
             src={refresh_icon}
