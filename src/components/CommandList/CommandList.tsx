@@ -24,12 +24,11 @@ export interface Match {
 const CommandList: React.FC = () => {
   const [matches, setMatches] = useState<Match[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
-  const { setError } = useError();
+  const { setError, error } = useError();
 
   const fetchMatches = async () => {
     try {
       setLoading(true);
-
       const response = await fetch(
         'https://app.ftoyd.com/fronttemp-service/fronttemp'
       );
@@ -40,8 +39,6 @@ const CommandList: React.FC = () => {
       } else {
         setMatches(data.data.matches);
       }
-
-      setMatches(data.data.matches);
     } catch (error) {
       console.error(error);
       setError(true);
@@ -58,7 +55,7 @@ const CommandList: React.FC = () => {
     return <div>Загрузка...</div>;
   }
 
-  if (matches.length === 0) {
+  if (matches.length === 0 && !error) {
     return <div>Нет матчей</div>;
   }
 
