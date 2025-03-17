@@ -1,0 +1,46 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  padding-bottom: 1rem;
+  width: 100%;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  width: 16rem;
+}
+
+.refresh_data_panel {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.refresh_btn {
+  background-color: var(--color-red);
+  font-size: 1.1rem;
+  padding: 1rem 2.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  border-radius: 0.4rem;
+  transition: background-color 0.3s ease;
+}
+
+.refresh_btn:active {
+  background-color: #a01131;
+}
+
+.refresh_btn:disabled {
+  opacity: 30%;
+}
+
+.refresh_icon {
+  width: 1.6rem;
+  height: auto;
+}
